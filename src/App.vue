@@ -1,9 +1,39 @@
 <template>
-  <router-view />
+  <div id="app">
+    <Menu :menuItems="menuItems" />
+    <div class="main-content">
+      <router-view />
+    </div>
+  </div>
 </template>
 
 <script>
+import Menu from './components/Menu/Menu.vue';
+
 export default {
   name: 'App',
+  components: {
+    Menu
+  },
+  data() {
+    return {
+      menuItems: [
+        { name: 'Home', path: '/' },
+        { name: 'Vista 1', path: '/vista1' },
+        { name: 'Vista 2', path: '/vista2' }
+      ]
+    }
+  },
 }
 </script>
+
+<style>
+#app {
+  display: flex;
+  width: 100%;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+</style>
