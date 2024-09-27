@@ -1,9 +1,9 @@
 <template>
-  <router-view />
+    <slot></slot>
 </template>
 
 <script>
 export default {
-  name: 'App',
+    name: 'HomeWiki',
 }
 </script>
