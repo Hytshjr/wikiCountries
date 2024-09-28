@@ -1,8 +1,15 @@
 <template>
-    <nav class="menu">
+    <nav :class="{ 'menu__collapsed': isCollapsed }">
         <div class="menu__logo">
             <LogoWorld />
             <span class="menu__title">WikiPaises</span>
+            <button
+                class="toggle-button"
+                @click="toggleMenu"
+                :aria-expanded="isCollapsed.toString()"
+                aria-label="Menu Desplegable">
+                <p>{{ isCollapsed ? '≡' : '✕'  }}</p>
+            </button>
         </div>
         <ul class="menu__list" >
             <MenuItem
@@ -30,7 +37,17 @@ export default {
             type: Array,
             required: true
         }
-    }
+    },
+    data() {
+        return {
+            isCollapsed: false
+        };
+    },
+    methods: {
+        toggleMenu() {
+            this.isCollapsed = !this.isCollapsed;
+        }
+    },
 }
 </script>
 

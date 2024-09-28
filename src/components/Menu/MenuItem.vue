@@ -29,6 +29,7 @@ export default {
         box-sizing: content-box;
         color: #adadad;
         margin-bottom: 10px;
+        min-width: 100px;
     }
 
     li:hover {
