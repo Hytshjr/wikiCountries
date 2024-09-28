@@ -8,6 +8,6 @@
 
 <script>
 export default {
-    name: 'Grid',
+    name: 'GridMain',
 }
 </script>

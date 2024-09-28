@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'Column',
+    name: 'ColumnGrid',
     props: {
         size: {
             type: Number,
