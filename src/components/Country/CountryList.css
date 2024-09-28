@@ -1,0 +1,25 @@
+.countries {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.countries__list{
+    margin: 0 auto;
+    width: 91%;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.countries-list::-webkit-scrollbar {
+    display: none;
+}
+
+.countries__list{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

@@ -1,0 +1,45 @@
+.countries__item {
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.countries__card {
+    width: 320px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.countries__info {
+    position: absolute;
+    background-color: #FFFFFF;
+    bottom: 0;
+    width: 100%;
+    height: 29%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 25px;
+}
+
+.countries__image {
+    width: 100%;
+    box-sizing: content-box;
+}
+
+.countries__flag {
+    height: 40px;
+    width: 60px;
+}
+
+.countries__details {
+    margin-left: 10px;
+}
+
+.countries__continent {
+    display: block;
+    margin-top: 4px;
+}
