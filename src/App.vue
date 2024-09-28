@@ -31,6 +31,7 @@ export default {
 #app {
   display: flex;
   width: 100%;
+  background-color: rgb(185, 232, 250);
 }
 
 .main-content {
