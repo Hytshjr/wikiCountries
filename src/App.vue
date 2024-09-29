@@ -2,9 +2,7 @@
   <div id="app">
     <Menu :menuItems="menuItems" />
     <div class="main-content">
-      <keep-alive>
-        <router-view />
-      </keep-alive>
+      <router-view/>
     </div>
   </div>
 </template>

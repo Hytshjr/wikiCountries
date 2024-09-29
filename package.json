@@ -15,7 +15,8 @@
     "graphql": "^16.9.0",
     "vue": "^3.2.13",
     "vue-lazyload": "^3.0.0",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

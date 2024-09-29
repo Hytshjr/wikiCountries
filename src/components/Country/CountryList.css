@@ -1,16 +1,12 @@
 .countries {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-.countries__list {
-    margin: 0 auto;
-    width: 100%;
     flex: 1;
     overflow-y: auto;
     display: flex;
+}
+
+.countries__list {
+    overflow-y: auto;
     justify-content: center;
     gap: 20px;
 }

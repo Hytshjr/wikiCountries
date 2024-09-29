@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/Home.vue';
+import Vista1 from '@/views/Vista1.vue';
+import Vista2 from '@/views/Vista2.vue';
 
 const routes = [
   {
@@ -7,8 +9,18 @@ const routes = [
     name: 'HomeApp',
     component: Home,
     meta: {
-        title: 'WikiPaises: Tu Guía Global'
-      }
+      title: 'WikiPaises: Tu Guía Global'
+    }
+  },
+  {
+    path: '/vista1',
+    name: 'vista1',
+    component: Vista1,
+  },
+  {
+    path: '/vista2',
+    name: 'Vista2',
+    component: Vista2,
   },
 ];
 

@@ -46,9 +46,20 @@ export default {
     methods: {
         toggleMenu() {
             this.isCollapsed = !this.isCollapsed;
+        },
+        checkWindowSize() {
+            this.isCollapsed = window.innerWidth <= 500;
         }
     },
-}
+    beforeUnmount() {
+        window.removeEventListener('resize', this.checkWindowSize);
+    },
+    mounted() {
+        this.checkWindowSize();
+
+        window.addEventListener('resize', this.checkWindowSize);
+    },
+};
 </script>
 
 <style scoped src="./Menu.css"></style>

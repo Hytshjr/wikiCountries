@@ -1,6 +1,5 @@
 <template>
     <main class="countries">
-        <h1 class="countries__title">Countries Information</h1>
         <Row class="countries__list" ref="scrollContainer">
             <CountryCard
                 v-for="country in displayedCountries"
@@ -18,9 +17,6 @@
                 @close="closeSlide"
             />
         </transition>
-        <div v-if="loading" class="countries__loading">Loading...</div>
-        <div v-if="error" class="countries__error">Error: {{ error.message }}</div>
-        <div v-if="displayedCountries.length === 0" class="countries__empty">No countries found.</div>
     </main>
 </template>
 
@@ -40,6 +36,7 @@ export default {
     },
     setup() {
         const { displayedCountries, loading, error } = useCountries();
+        console.debug(displayedCountries, 'displayedCountries')
         const selectedCountry = ref(null);
         const activeCountry = ref(null);
 
