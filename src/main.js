@@ -10,8 +10,8 @@ const app = createApp(App);
 
 provideApolloClient(apolloClient);
 app.use(VueLazyload, {
-  loading: '/path-to-loading-image',
-  error: '/path-to-error-image',
+  loading: '/loading-image.gif',
+  error: '/loading-image.gif',
 });
 app.use(router);
 app.mount('#app');
