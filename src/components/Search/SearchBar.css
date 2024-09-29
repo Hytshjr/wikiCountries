@@ -1,0 +1,202 @@
+.countries__search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 42px auto;
+    max-width: 1000px;
+    width: 100%;
+    padding: 10px 30px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 73px;
+    position: relative;
+}
+
+.countries__search-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.countries__search-label {
+    font-size: 19px;
+    color: #333;
+}
+
+.countries__search-input {
+    flex: 1;
+    width: 400px;
+    height: 40px;
+    padding: 5px 0 10px 0;
+    margin: 0 0px;
+    border: 1px solid #ccc;
+    outline: none;
+    border: none;
+    outline: none;
+    transition: border-bottom 0.2s ease;
+    text-align: left;
+}
+
+.countries__search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    font-size: 1em;
+    height: 82%;
+}
+
+.countries__search-button svg {
+    margin-right: 9px;
+    height: 20px;
+}
+
+.countries__search-button:hover {
+    background-color: #0056b3;
+}
+
+.countries__search-input:focus {
+    border-bottom: 1px solid rgb(39, 84, 207);
+}
+
+.countries__continent-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.countries__continent-select:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+.countries__continent-selector {
+    position: absolute;
+    background-color: white;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    z-index: 1000;
+    top: 90px;
+    width: 70%;
+    left: 0;
+    border-radius: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.continent-option__container {
+    margin-top: 302px;
+    z-index: 1000;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+.continent__clear,
+.continent__title {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.continent-option__name {
+    margin-top: 10px;
+}
+
+.continent-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.continent__clear {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.continent-image__container {
+    width: 200px;
+    height: 140px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.continent-image {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.continent-image__container:hover {
+    border: #007BFF 2px solid;
+}
+.selected .continent-image__container {
+    border: 2px solid #007BFF; /* Borde azul para la opción seleccionada */
+}
+
+@media (max-width: 500px) {
+    .countries__search {
+        max-width:none;
+        justify-content: start;
+        width: 100%;
+    }
+
+    .countries__search-input {
+        width: 100%;
+    }
+
+    .countries__search-button {
+        visibility: collapse;
+    }
+
+    .continent-option__container {
+        flex-direction: column;
+    }
+
+    .countries__continent-selector {
+        overflow-y: auto;
+    }
+
+    .continent-image__container {
+        width: 50px;
+        height: 30px;
+        border-radius: 7px;
+        box-shadow: none;
+    }
+
+    .continent-option {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        gap: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
