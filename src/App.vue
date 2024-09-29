@@ -2,7 +2,9 @@
   <div id="app">
     <Menu :menuItems="menuItems" />
     <div class="main-content">
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </div>
   </div>
 </template>
@@ -31,6 +33,7 @@ export default {
 #app {
   display: flex;
   width: 100%;
+  background-color: rgb(185, 232, 250);
 }
 
 .main-content {
