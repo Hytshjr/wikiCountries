@@ -6,6 +6,7 @@
 .countries__card {
     width: 320px;
     height: 220px;
+    display: flex;
     overflow: hidden;
     border-radius: 20px;
     position: relative;
@@ -27,7 +28,9 @@
 
 .countries__image {
     width: 100%;
-    box-sizing: content-box;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
 }
 
 .countries__flag {
@@ -37,9 +40,37 @@
 
 .countries__details {
     margin-left: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.countries__name {
+    overflow: hidden;
+    font-size: 1.1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgb(14, 135, 235);
+}
+
+.active .countries__info {
+    background-color: rgb(14, 135, 235);
+    color: #FFFFFF;
+}
+
+.active .countries__name {
+    color: #FFFFFF;
 }
 
 .countries__continent {
     display: block;
     margin-top: 4px;
+}
+
+@media (max-width: 500px) {
+    .countries__card {
+        max-width: 320px;
+        width: 100%;
+    }
 }

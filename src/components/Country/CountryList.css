@@ -5,9 +5,9 @@
     height: 100vh;
 }
 
-.countries__list{
+.countries__list {
     margin: 0 auto;
-    width: 91%;
+    width: 100%;
     flex: 1;
     overflow-y: auto;
     display: flex;
@@ -19,7 +19,7 @@
     display: none;
 }
 
-.countries__list{
+.countries__list {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
