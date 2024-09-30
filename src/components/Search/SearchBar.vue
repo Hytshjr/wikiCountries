@@ -3,7 +3,7 @@
         <div class="countries__search-container">
             <label for="country-search" class="countries__search-label">País</label>
             <input id="country-search" type="text" placeholder="Ingresa el país" class="countries__search-input"
-                v-model="searchTerm" @input="filterCountries" />
+                v-model="searchTerm" @input="filterCountries(searchTerm)" />
         </div>
         <button class="countries__search-button" @click="filterCountries(searchTerm)">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
