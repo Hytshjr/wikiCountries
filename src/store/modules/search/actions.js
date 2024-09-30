@@ -1,5 +1,7 @@
 export default {
     filterCountries({ commit, state }, term) {
+        term = term.toLowerCase();
+
         const filteredCountries = state.countries
             .filter(country => country.name.toLowerCase().includes(term))
             .sort((a, b) => {
