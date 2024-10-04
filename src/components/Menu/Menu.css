@@ -3,16 +3,14 @@
 }
 
 nav {
-    width: 100%;
     padding: 20px;
     height: 100vh;
-    max-width: 250px;
+    padding-right: 50px;
     position: relative;
     background-color: #2e2e2e;
-    transition: width 0.4s ease;
+    transition: width 0.4s ease, padding 0.4s ease;
     min-height: 100vh;
     z-index: 10001;
-    min-width: 250px;
 }
 
 .menu__list {
@@ -65,7 +63,7 @@ nav {
     width: 0;
     padding-left: 0;
     padding-right: 0;
-    transition: width 0.4s ease, padding 0.4s ease;
+    transition: width 0.9s ease, padding 0.9s ease;
 }
 
 .menu__collapsed .toggle-button {
