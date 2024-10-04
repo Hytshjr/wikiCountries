@@ -11,7 +11,9 @@ export const useCountries = (limit = 16) => {
     const loading = ref(false);
     const error = ref(null);
     let currentIndex = 0;
-    const { result, error: queryError } = useQuery(GET_COUNTRIES);
+    const { result, error: queryError } = useQuery(GET_COUNTRIES, null, {
+        fetchPolicy: 'network-only'
+      });
 
     const filteredCountries = computed(() => store.state.search.filteredCountries);
 
