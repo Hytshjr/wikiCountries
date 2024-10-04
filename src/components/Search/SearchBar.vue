@@ -73,8 +73,6 @@ export default {
         clearFilters() {
             this.searchTerm = '';
             this.selectedContinent = '';
-            this.filterCountries();
-            this.filterCountriesByContinent('');
         },
     },
     watch: {
